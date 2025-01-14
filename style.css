@@ -1,0 +1,335 @@
+/* styles.css */
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+   
+}
+
+/* page de bienvenue (landing page) */
+
+.big-title {
+    color: white;
+    font-size: 80px;
+    padding: 20px 50px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3c0ceb;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    
+}
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+.content {
+    margin-top: 70px;
+    padding: 20px;
+}
+
+section {
+    padding: 20px 0;
+}
+
+.section:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+.section:nth-child(even) {
+    background-color: #e2e2e2;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+#section1 h2{color: #fff;}
+#section1 P{color: #fff;}
+
+#section1{
+    background-image: url(Image/Logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    height: 700px;
+}
+
+
+#section2 .content {
+    display: flex;
+    align-items: center; /* Aligner verticalement l'image et le texte */
+    justify-content: flex-start; /* Aligner l'image et le texte à gauche */
+}
+
+#section2 .image {
+    width: 50%; /* Vous pouvez ajuster la taille de l'image */
+    margin-right: 200px; /* Espacement entre l'image et le texte */
+}
+
+#section2 .text {
+    flex: 1; /* Le texte prend le reste de l'espace disponible */
+}
+
+#section2 h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#section2 p {
+    font-size: 30px;
+}
+
+#section3 .content {
+    display: flex;
+    justify-content: space-between; /* Place les éléments à gauche et à droite */
+    align-items: center; /* Aligne verticalement le texte et les images */
+}
+
+#section3 .image-left, #section3 .image-right {
+    width: 20%; /* Définissez la taille des images */
+    height: auto; /* Gardez les proportions des images */
+}
+
+#section3 .text {
+    flex: 1; /* Le texte prend l'espace restant entre les deux images */
+    text-align: center; /* Centrer le texte */
+}
+
+#section3 h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+#section3 p {
+    font-size: 1em;
+}
+
+/* Conteneur principal de la section */
+.section {
+    padding: 20px;
+}
+
+/* Conteneur des images */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;  /* Espace entre les images */
+}
+
+/* Chaque élément image */
+.image-item {
+    text-align: center;
+    width: 30%; /* La largeur de chaque image */
+}
+
+.image-item img {
+    width: 100%; /* L'image occupe toute la largeur de son conteneur */
+    max-width: 300px; /* Limite la taille maximale des images */
+    height: auto;
+}
+
+.image-item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.image-item p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #555;
+}
+
+
+/* Animation automatique */
+@keyframes slide-animation {
+    0%, 10% { transform: translateX(0); }
+    10%, 20% { transform: translateX(-100%); }
+    20%, 30% { transform: translateX(-200%); }
+   
+}
+
+
+/* Style général du texte sous les images */
+.text {
+    margin-top: 30px;
+}
+
+/* Icônes de contact à droite */
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    margin: 10px 0;
+    text-align: left;
+    
+}
+.contact-item i {
+    font-size: 500px;
+    margin-right: 10px;
+}
+.contact-item span {
+    font-size: 16px;
+    color: #555;
+}
+
+.social-icons i{
+    Font-size: 50px;
+    justify-content: space-between;
+    }
+
+/* Formulaire de contact à gauche */
+.contact-form {
+    flex: 1;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+/* Conteneur principal de la section de contact */
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Dispose les éléments à gauche et à droite */
+    gap: 40px; /* Espace entre les deux colonnes */
+    margin-top: 20px;
+}
+
+/* Conteneur des informations de contact à gauche */
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Formulaire de contact à droite */
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Icônes de contact */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.contact-item i {
+    font-size: 45px;
+    margin-right: 30px;
+}
+
+.contact-item span {
+    font-size: 3Opx;
+    color: #555;
+}
+
+/* Style pour les champs du formulaire */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    font-size: 90px;
+    margin-bottom: 23px;
+    border: 6px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #3a07f3;
+    color: rgb(238, 237, 243);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 300px;
+    border-radius: 4px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #2609a7;
+}
+
+/* Réduire la taille des éléments sur mobile */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
